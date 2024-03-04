@@ -1,0 +1,6 @@
+ros2 run yolov5_ros2 yolo_detect_2d --ros-args -p device:=cpu -p image_topic:=/image_raw -p show_result:=True
+ros2 run yolov5_ros2 yolo_detect_2d --ros-args -p device:=cpu -p video_url:=192.168.31.100 -p show_result:=True
+ros2 run usb_cam usb_cam_node_exe
+ros2 run image_view image_view image:=/image_raw
+
+将yolo结果转换为以小车为中心的坐标和物体
